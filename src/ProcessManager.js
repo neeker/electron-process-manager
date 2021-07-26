@@ -15,6 +15,11 @@ class ProcessManager extends EventEmitter {
     this.openProcessManager = this.open.bind(this);
   }
 
+  //in case this isn't already done in the app.
+  initializeElectronRemote() {
+    return require("@electron/remote/main").initialize();
+  }
+
   open (options = defaultOptions) {
     if (this.window) {
       this.window.focus();

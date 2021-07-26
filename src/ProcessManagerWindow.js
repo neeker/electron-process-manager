@@ -11,8 +11,11 @@ class ProcessManagerWindow extends BrowserWindow {
       useContentSize: true,
       webPreferences: {
         nodeIntegration: true,
+        nodeIntegrationInSubFrames: true,
+        nodeIntegrationInWorker: true,
         webviewTag: true,
         enableRemoteModule: true,
+        contextIsolation: false,
       }
     }, options || {});
 

@@ -2,6 +2,7 @@ var { app, shell, BrowserWindow, Menu, ipcMain } = require('electron');
 var join = require('path').join;
 
 var processManager = require('..');
+
 const defaultMenu = require('electron-default-menu');
 
 processManager.on('killed-process', pid => console.log('Killed process', pid));
@@ -9,11 +10,14 @@ processManager.on('killed-process', pid => console.log('Killed process', pid));
 app.once('window-all-closed', function () { app.quit(); });
 
 app.once('ready', function () {
+  processManager.initializeElectronRemote();
+
   var w = new BrowserWindow({
     webPreferences: {
       nodeIntegration: true,
       webviewTag: true,
       contextIsolation: false,
+      enableRemoteModule: true,
     },
   });
   w.once('closed', function () { w = null; });

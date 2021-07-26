@@ -8,17 +8,24 @@ const app = new Application({
   args: [join(__dirname, '../example/main.js')]
 });
 
-app.start()
-  .then(() => app.client.waitUntilWindowLoaded())
-  .then(() => app.electron.ipcRenderer.send('open-process-manager'))
-  .then(() => app.client.waitUntilWindowLoaded())
-  .then(() => assert(app.client.getWindowCount(), 2))
-  .then(() => app.client.switchWindow(/process-manager\.html/))
-  .then(() => app.client.waitForVisible('#app .process-table'))
-  .then(() => app.stop())
-  .catch(function (error) {
-    console.error('Test failed', error);
-    if (app && app.isRunning()) {
-      app.stop().then(() => process.exit(1))
-    } else process.exit(1);
-  });
+(async () => {
+    try {
+        await app.start();
+        await app.client.waitUntilWindowLoaded();
+        await app.electron.ipcRenderer.send('open-process-manager');
+        //This looks to be incorrect signature for assert.
+        // assert(app.client.getWindowCount(), 2);
+        //There are 2 webviews on the index page. They are included in windowCount, so it's 4, not 2.
+        assert.equal(await app.client.getWindowCount(), 4);
+        await app.client.switchWindow(/process-manager\.html/);
+        await (await app.client.$('#app .process-table')).waitForDisplayed({ timeout: 60000 });
+        await app.stop();
+    }
+    catch (error) {
+        console.error('Test failed', error);
+        if (app && app.isRunning()) {
+            await app.stop();
+            process.exit(1);
+        } else process.exit(1);
+    }
+})();
