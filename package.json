@@ -1,5 +1,5 @@
 {
-  "name": "electron-process-manager",
+  "name": "@krisdages/electron-process-manager",
   "version": "2.0.0",
   "description": "Process manager UI for Electron applications",
   "repository": "getstation/electron-process-manager",
