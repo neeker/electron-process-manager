@@ -1,8 +1,8 @@
 {
   "name": "@krisdages/electron-process-manager",
-  "version": "2.0.0",
-  "description": "Process manager UI for Electron applications",
-  "repository": "getstation/electron-process-manager",
+  "version": "2.0.1",
+  "description": "Process manager UI for Electron applications - Fork with support for @electron/remote",
+  "repository": "krisdages/electron-process-manager",
   "main": "src/index.js",
   "scripts": {
     "dev": "webpack -d --watch",

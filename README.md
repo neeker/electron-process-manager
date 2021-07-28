@@ -1,5 +1,11 @@
 # Process Manager UI for Electron Apps
 
+## Fork using @electron/remote instead of builtin remote module
+* Minimum electron version is `10`
+* [@electron/remote](https://github.com/electron/remote) is a peerDependency. It needs to be initialized in the main process. Follow the instructions in the link.
+
+## Original 1.0 Readme
+
 This package provides a process manager UI for Electron applications.
 
 It opens a window displaying a table of every processes run by the Electron application with information (type, URL for `webContents`, memory..).
@@ -8,8 +14,8 @@ It opens a window displaying a table of every processes run by the Electron appl
 
 ![screenshot](https://github.com/getstation/electron-process-manager/raw/master/.github/screenshots/window.png)
 
-:warning: For `@electron>=3.0.0, <7.x`, use version `0.7.1` of this package.
-For versions `>=7.x`, use latest.
+~~:warning: For `@electron>=3.0.0, <7.x`, use version `0.7.1` of this package.
+For versions `>=7.x`, use latest.~~
 
 It can be useful to debug performance of an app with several `webview`.
 
