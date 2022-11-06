@@ -1,6 +1,6 @@
 {
-  "name": "@krisdages/electron-process-manager",
-  "version": "2.0.1",
+  "name": "@snz1/electron-process-manager",
+  "version": "3.0.0",
   "description": "Process manager UI for Electron applications - Fork with support for @electron/remote",
   "repository": "krisdages/electron-process-manager",
   "main": "src/index.js",
@@ -18,12 +18,12 @@
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "@electron/remote": "^1.2.0",
+    "@electron/remote": "^2.0.8",
     "babel-loader": "^8.0.0",
     "bluebird": "^3.7.1",
     "bluebird-extra": "^2.0.0",
-    "electron": "^10.4.7",
-    "electron-default-menu": "1.0.1",
+    "electron": "^21.2.2",
+    "electron-default-menu": "1.0.2",
     "filesize": "^5.0.3",
     "format-number": "^3.0.0",
     "object-path": "^0.11.4",
@@ -34,8 +34,8 @@
     "webpack": "^2.5.1"
   },
   "peerDependencies": {
-    "electron": ">= 10",
-    "@electron/remote": "^1.2.0"
+    "electron": ">= 14",
+    "@electron/remote": "^2.0.8"
   },
   "dependencies": {
     "electron-process-reporter": "^1.4.0"

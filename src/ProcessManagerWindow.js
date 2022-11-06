@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron/remote');
 const path = require('path');
 const { onExtendedProcessMetrics } = require('electron-process-reporter');
 

@@ -78,7 +78,11 @@ export default class ProcessManager extends React.Component {
 
   render () {
     const { processData } = this.state;
-    if (!processData) return (<span>No data</span>);
+    if (!processData) return (
+      <div className="loadding">
+        数据加载中...
+      </div>
+    );
 
     return (
       <div className="window">

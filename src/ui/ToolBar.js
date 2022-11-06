@@ -19,14 +19,14 @@ export default class ToolBar extends React.Component {
                 disabled={this.props.disableKill}
                 onClick={this.props.onKillClick}
               >
-                End process
+                结束进程
               </button>
               <button
                 className="btn btn-default"
                 disabled={this.props.disabelOpenDevTool}
                 onClick={this.props.onOpenDevToolClick}
               >
-                Open Dev Tool
+                打开调试
               </button>
             </div>
           </div>

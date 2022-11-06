@@ -25,25 +25,25 @@ export default class ProcessTable extends React.Component {
               path='pid'
               sorting={this.props.sorting}
               onSortingChange={this.props.onSortingChange}
-            >Pid</ProcessTableHeader>
+            >进程ID</ProcessTableHeader>
 
             <ProcessTableHeader
               path='webContents.0.URLDomain'
               sorting={this.props.sorting}
               onSortingChange={this.props.onSortingChange}
-            >WebContents Domain</ProcessTableHeader>
+            >访问域名</ProcessTableHeader>
 
             <ProcessTableHeader
               path='webContents.0.type'
               sorting={this.props.sorting}
               onSortingChange={this.props.onSortingChange}
-            >Process Type</ProcessTableHeader>
+            >任务类型</ProcessTableHeader>
 
             <ProcessTableHeader
               path='memory.workingSetSize'
               sorting={this.props.sorting}
               onSortingChange={this.props.onSortingChange}
-            >Working Set Size</ProcessTableHeader>
+            >内存占用</ProcessTableHeader>
 
             <ProcessTableHeader
               path='cpu.percentCPUUsage'
@@ -55,25 +55,25 @@ export default class ProcessTable extends React.Component {
               path='cpu.idleWakeupsPerSecond'
               sorting={this.props.sorting}
               onSortingChange={this.props.onSortingChange}
-            >Idle Wake Ups /s</ProcessTableHeader>
+            >闲置状态唤醒</ProcessTableHeader>
 
             <ProcessTableHeader
               path='webContents.0.id'
               sorting={this.props.sorting}
               onSortingChange={this.props.onSortingChange}
-            >WebContents Id</ProcessTableHeader>
+            >任务ID</ProcessTableHeader>
 
             <ProcessTableHeader
               path='webContents.0.type'
               sorting={this.props.sorting}
               onSortingChange={this.props.onSortingChange}
-            >WebContents Type</ProcessTableHeader>
+            >任务类型</ProcessTableHeader>
 
             <ProcessTableHeader
               path='webContents.0.URL'
               sorting={this.props.sorting}
               onSortingChange={this.props.onSortingChange}
-            >WebContents URL</ProcessTableHeader>
+            >页面地址</ProcessTableHeader>
           </tr>
         </thead>
         <tbody>

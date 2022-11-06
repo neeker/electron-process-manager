@@ -20,6 +20,7 @@ app.once('ready', function () {
       enableRemoteModule: true,
     },
   });
+
   w.once('closed', function () { w = null; });
   w.loadURL('file://' + join(__dirname, 'index.html'));
 
@@ -28,7 +29,7 @@ app.once('ready', function () {
       .map(menu => {
         if (menu.label === 'Window') {
           menu.submenu.push({
-            label: 'Open Process Manager',
+            label: '任务管理器',
             click: () => processManager.open({
               defaultSorting: {
                 path: 'cpu.percentCPUUsage',

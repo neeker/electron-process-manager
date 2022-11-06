@@ -26,6 +26,9 @@ class ProcessManager extends EventEmitter {
     }
 
     this.window = new ProcessManagerWindow();
+
+    require('@electron/remote/main').enable(this.window.webContents)
+
     this.window.defaultSorting = options.defaultSorting || {};
     this.window.showWhenReady();
     this.window.on('kill-process', pid => this.killProcess(pid))
