@@ -2,7 +2,7 @@
   "name": "@snz1/electron-process-manager",
   "version": "3.0.0",
   "description": "Process manager UI for Electron applications - Fork with support for @electron/remote",
-  "repository": "krisdages/electron-process-manager",
+  "repository": "https://github.com/neeker/electron-process-manager.git",
   "main": "src/index.js",
   "scripts": {
     "dev": "webpack -d --watch",
